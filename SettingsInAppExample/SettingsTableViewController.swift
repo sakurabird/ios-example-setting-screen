@@ -19,12 +19,20 @@ class SettingsTableViewController: UITableViewController {
 
     // MARK: - Table view data source
 
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        return 0
-    }
+  override func numberOfSections(in tableView: UITableView) -> Int {
+    // セクションの数を返します
+    return 2
+  }
 
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 0
+  override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    // それぞれのセクション毎に何行のセルがあるかを返します
+    switch section {
+    case 0: // 「設定」のセクション
+      return 1
+    case 1: // 「その他」のセクション
+      return 2
+    default: // ここが実行されることはないはず
+      return 0
     }
-
+  }
 }
