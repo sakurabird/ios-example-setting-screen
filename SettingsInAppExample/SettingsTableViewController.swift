@@ -16,6 +16,11 @@ class SettingsTableViewController: UITableViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
 
+    // UserDefaultsの情報を画面にセットする
+    if let name = UserDefaults.standard.value(forKey: "name") as? String {
+      nameTextField.text = name
+    }
+
     // アプリのバージョン
     if let version: String = Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString") as? String {
       versionLabel.text = version
