@@ -14,8 +14,13 @@ class SettingsTableViewController: UITableViewController {
   @IBOutlet weak var versionLabel: UILabel!
 
   override func viewDidLoad() {
-        super.viewDidLoad()
+    super.viewDidLoad()
+
+    // アプリのバージョン
+    if let version: String = Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString") as? String {
+      versionLabel.text = version
     }
+  }
 
     // MARK: - Table view data source
 
