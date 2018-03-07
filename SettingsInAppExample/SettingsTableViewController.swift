@@ -10,7 +10,10 @@ import UIKit
 
 class SettingsTableViewController: UITableViewController {
 
-    override func viewDidLoad() {
+  @IBOutlet weak var nameLabel: UITableViewCell!
+  @IBOutlet weak var versionLabel: UITableViewCell!
+  
+  override func viewDidLoad() {
         super.viewDidLoad()
 
         // Uncomment the following line to preserve selection between presentations

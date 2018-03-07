@@ -38,7 +38,6 @@
 		2177343B20501552002CEF2D = {
 			isa = PBXGroup;
 			children = (
-				2177345920501D10002CEF2D /* SettingsTableViewController.swift */,
 				2177344620501552002CEF2D /* SettingsInAppExample */,
 				2177344520501552002CEF2D /* Products */,
 			);
@@ -56,6 +55,7 @@
 			isa = PBXGroup;
 			children = (
 				2177344720501552002CEF2D /* AppDelegate.swift */,
+				2177345920501D10002CEF2D /* SettingsTableViewController.swift */,
 				2177344B20501552002CEF2D /* Main.storyboard */,
 				2177344E20501552002CEF2D /* Assets.xcassets */,
 				2177345020501552002CEF2D /* LaunchScreen.storyboard */,
