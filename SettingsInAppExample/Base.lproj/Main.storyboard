@@ -99,8 +99,8 @@
                     </tableView>
                     <navigationItem key="navigationItem" id="aV8-jx-qvy"/>
                     <connections>
-                        <outlet property="nameLabel" destination="bg5-WN-vfP" id="H1u-db-Qws"/>
-                        <outlet property="versionLabel" destination="R2T-O3-3uA" id="rZ2-Pf-B8D"/>
+                        <outlet property="nameLabel" destination="7YH-6W-Gby" id="otK-6B-shO"/>
+                        <outlet property="versionLabel" destination="UWr-HV-YUT" id="pHw-Yz-6OF"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1Es-og-jAZ" userLabel="First Responder" sceneMemberID="firstResponder"/>

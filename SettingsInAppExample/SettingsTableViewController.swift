@@ -10,9 +10,9 @@ import UIKit
 
 class SettingsTableViewController: UITableViewController {
 
-  @IBOutlet weak var nameLabel: UITableViewCell!
-  @IBOutlet weak var versionLabel: UITableViewCell!
-  
+  @IBOutlet weak var nameLabel: UILabel!
+  @IBOutlet weak var versionLabel: UILabel!
+
   override func viewDidLoad() {
         super.viewDidLoad()
     }
