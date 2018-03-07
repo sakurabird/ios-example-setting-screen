@@ -18,7 +18,7 @@ class SettingsTableViewController: UITableViewController {
 
     // UserDefaultsの情報を画面にセットする
     if let name = UserDefaults.standard.value(forKey: "name") as? String {
-      nameTextField.text = name
+      nameLabel.text = name
     }
 
     // アプリのバージョン
