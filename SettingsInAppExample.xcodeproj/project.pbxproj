@@ -58,8 +58,8 @@
 			children = (
 				2177344720501552002CEF2D /* AppDelegate.swift */,
 				2177345920501D10002CEF2D /* SettingsTableViewController.swift */,
-				2177344B20501552002CEF2D /* Main.storyboard */,
 				2177345D205062C9002CEF2D /* SettingsNameTableViewController.swift */,
+				2177344B20501552002CEF2D /* Main.storyboard */,
 				2177344E20501552002CEF2D /* Assets.xcassets */,
 				2177345020501552002CEF2D /* LaunchScreen.storyboard */,
 				2177345320501552002CEF2D /* Info.plist */,

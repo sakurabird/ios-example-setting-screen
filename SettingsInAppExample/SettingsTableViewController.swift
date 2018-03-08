@@ -16,6 +16,10 @@ class SettingsTableViewController: UITableViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
 
+    // UserDefaultsの変更を監視する
+    NotificationCenter.default.addObserver(self, selector: #selector(userDefaultsDidChange),
+                                           name: UserDefaults.didChangeNotification, object: nil)
+
     // UserDefaultsの情報を画面にセットする
     if let name = UserDefaults.standard.value(forKey: "name") as? String {
       nameLabel.text = name
@@ -44,5 +48,17 @@ class SettingsTableViewController: UITableViewController {
     default: // ここが実行されることはないはず
       return 0
     }
+  }
+
+  @objc func userDefaultsDidChange(_ notification: Notification) {
+    // UserDefaultsの変更があったので画面の情報を更新する
+    if let name = UserDefaults.standard.value(forKey: "name") as? String {
+      nameLabel.text = name
+    }
+  }
+
+  deinit {
+    // UserDefaultsの変更の監視を解除する
+    NotificationCenter.default.removeObserver(self, name: UserDefaults.didChangeNotification, object: nil)
   }
 }
