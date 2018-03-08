@@ -8,24 +8,20 @@
 
 import UIKit
 
-class SettingsNameTableViewController: UITableViewController {
+class SettingsNameTableViewController: UITableViewController, UITextFieldDelegate {
 
   @IBOutlet weak var nameTextField: UITextField!
 
   override func viewDidLoad() {
-        super.viewDidLoad()
+    super.viewDidLoad()
 
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
+    nameTextField.delegate = self
 
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
+    // UserDefaultsの情報を画面にセットする
+    if let name = UserDefaults.standard.value(forKey: "name") as? String {
+      nameTextField.text = name
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
+  }
 
     // MARK: - Table view data source
   override func numberOfSections(in tableView: UITableView) -> Int {
@@ -36,5 +32,14 @@ class SettingsNameTableViewController: UITableViewController {
   override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
     // それぞれのセクション毎に何行のセルがあるかを返します
     return 1
+  }
+
+  func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+    // keyboardを隠す
+    textField.resignFirstResponder()
+    // 入力された内容を保存する
+    UserDefaults.standard.set(textField.text, forKey: "name")
+
+    return true
   }
 }
