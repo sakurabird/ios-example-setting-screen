@@ -127,6 +127,20 @@
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="fTd-PN-6zA" id="P5O-QZ-6js">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="名前を入力してください" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xv1-Nt-YNK">
+                                                    <rect key="frame" x="16" y="16" width="343" height="11.5"/>
+                                                    <nil key="textColor"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits" returnKeyType="done" textContentType="name"/>
+                                                </textField>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="xv1-Nt-YNK" firstAttribute="leading" secondItem="P5O-QZ-6js" secondAttribute="leading" constant="16" id="4GB-AQ-XnB"/>
+                                                <constraint firstAttribute="trailing" secondItem="xv1-Nt-YNK" secondAttribute="trailing" constant="16" id="EjH-d6-ebk"/>
+                                                <constraint firstItem="xv1-Nt-YNK" firstAttribute="top" secondItem="P5O-QZ-6js" secondAttribute="top" constant="16" id="IAL-0f-XJS"/>
+                                                <constraint firstAttribute="bottom" secondItem="xv1-Nt-YNK" secondAttribute="bottom" constant="16" id="gZ2-IX-NJd"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </cells>
@@ -137,6 +151,9 @@
                             <outlet property="delegate" destination="uAo-Rq-JIn" id="rJt-wS-oSV"/>
                         </connections>
                     </tableView>
+                    <connections>
+                        <outlet property="nameTextField" destination="xv1-Nt-YNK" id="WzL-mS-XXM"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QXo-2H-QJb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
