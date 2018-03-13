@@ -9,5 +9,5 @@ Swift 4 Xcode 9
 
 こちらのブログ記事のソースコードです。
 
-UITableView + Static Cellsでアプリ内設定画面を作成するチュートリアル(XCode9, Swift4, StoryBoard使用)
+UITableView + Static Cellsでアプリ内設定画面を作成するサンプル(XCode9, Swift4, StoryBoard使用)
 http://sakura-bird1.hatenablog.com/entry/2018/03/09/014455
